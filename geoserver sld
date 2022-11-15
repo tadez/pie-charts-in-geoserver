@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0.0" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.0.0/StyledLayerDescriptor.xsd">
+    <!-- a named layer is the basic building block of an sld document -->
+
+  <NamedLayer>
+    <Name>Service Revenue</Name>
+    <UserStyle>
+        <!-- they have names, titles and abstracts -->
+      
+      <Title>Service revenue </Title>
+      <Abstract>Service revenue by region</Abstract>
+      <!-- FeatureTypeStyles describe how to render different features -->
+      <!-- a feature type for points -->
+
+      <FeatureTypeStyle>
+        <!--FeatureTypeName>Feature</FeatureTypeName-->
+        <Rule>
+          <Name>Slice</Name>
+          <Title>Service Revenue Area</Title>
+          <Abstract>Area</Abstract>
+          <!-- <MaxScaleDenominator>3000</MaxScaleDenominator> -->
+
+          <!-- like a linesymbolizer but with a fill too -->
+          <PolygonSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+			<Fill>
+              <CssParameter name="fill">#017a01</CssParameter>
+			  <CssParameter name="fill-opacity">0</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#017a01</CssParameter>
+              <CssParameter name="stroke-width">1</CssParameter>
+              <CssParameter name="stroke-linejoin">bevel</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+      </FeatureTypeStyle>
+     
+      <FeatureTypeStyle>
+        <!--FeatureTypeName>Feature</FeatureTypeName-->
+        <Rule>
+          <Name>Refuse</Name>
+          <Title>Refuse</Title>
+          <Abstract>Refuse</Abstract>
+
+          <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>onemapfid</ogc:PropertyName>
+				<ogc:Literal>-1</ogc:Literal>
+     		</ogc:PropertyIsEqualTo>
+   		  </ogc:Filter>
+
+          <PolygonSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+			<Fill>
+              <CssParameter name="fill">#BFDEA3</CssParameter>
+			  <CssParameter name="fill-opacity">0.8</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#BFDEA3</CssParameter>
+              <CssParameter name="stroke-width">1</CssParameter>
+              <CssParameter name="stroke-linejoin">bevel</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <VendorOption name="inclusion">legendOnly</VendorOption>
+      </FeatureTypeStyle>
+
+      <FeatureTypeStyle>
+        <!--FeatureTypeName>Feature</FeatureTypeName-->
+        <Rule>
+          <Name>Sewerage</Name>
+          <Title>Sewerage</Title>
+          <Abstract>Sewerage</Abstract>
+
+          <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>onemapfid</ogc:PropertyName>
+				<ogc:Literal>-1</ogc:Literal>
+     		</ogc:PropertyIsEqualTo>
+   		  </ogc:Filter>
+
+          <PolygonSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+			<Fill>
+              <CssParameter name="fill">#664C35</CssParameter>
+			  <CssParameter name="fill-opacity">0.8</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#664C35</CssParameter>
+              <CssParameter name="stroke-width">1</CssParameter>
+              <CssParameter name="stroke-linejoin">bevel</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <VendorOption name="inclusion">legendOnly</VendorOption>
+      </FeatureTypeStyle>
+
+      <FeatureTypeStyle>
+        <!--FeatureTypeName>Feature</FeatureTypeName-->
+        <Rule>
+          <Name>Rates</Name>
+          <Title>Rates</Title>
+          <Abstract>Rates</Abstract>
+
+          <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>onemapfid</ogc:PropertyName>
+				<ogc:Literal>-1</ogc:Literal>
+     		</ogc:PropertyIsEqualTo>
+   		  </ogc:Filter>
+
+          <PolygonSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+			<Fill>
+              <CssParameter name="fill">#C52234</CssParameter>
+			  <CssParameter name="fill-opacity">0.8</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#C52234</CssParameter>
+              <CssParameter name="stroke-width">1</CssParameter>
+              <CssParameter name="stroke-linejoin">bevel</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <VendorOption name="inclusion">legendOnly</VendorOption>
+      </FeatureTypeStyle>
+
+      <FeatureTypeStyle>
+        <!--FeatureTypeName>Feature</FeatureTypeName-->
+        <Rule>
+          <Name>Water</Name>
+          <Title>Water</Title>
+          <Abstract>Water</Abstract>
+
+          <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>onemapfid</ogc:PropertyName>
+				<ogc:Literal>-1</ogc:Literal>
+     		</ogc:PropertyIsEqualTo>
+   		  </ogc:Filter>
+
+          <PolygonSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+			<Fill>
+              <CssParameter name="fill">#257BA0</CssParameter>
+			  <CssParameter name="fill-opacity">0.8</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#257BA0</CssParameter>
+              <CssParameter name="stroke-width">1</CssParameter>
+              <CssParameter name="stroke-linejoin">bevel</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <VendorOption name="inclusion">legendOnly</VendorOption>
+      </FeatureTypeStyle>
+
+      <FeatureTypeStyle>
+        <!--FeatureTypeName>Feature</FeatureTypeName-->
+        <Rule>
+          <Name>Water (Metered)</Name>
+          <Title>Water (Metered)</Title>
+          <Abstract>Water (Metered)</Abstract>
+
+          <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>onemapfid</ogc:PropertyName>
+				<ogc:Literal>-1</ogc:Literal>
+     		</ogc:PropertyIsEqualTo>
+   		  </ogc:Filter>
+
+          <PolygonSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+			<Fill>
+              <CssParameter name="fill">#73AAC2</CssParameter>
+			  <CssParameter name="fill-opacity">0.8</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#73AAC2</CssParameter>
+              <CssParameter name="stroke-width">1</CssParameter>
+              <CssParameter name="stroke-linejoin">bevel</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <VendorOption name="inclusion">legendOnly</VendorOption>
+      </FeatureTypeStyle>
+
+      <FeatureTypeStyle>
+        <!--FeatureTypeName>Feature</FeatureTypeName-->
+        <Rule>
+          <Name>Electricity</Name>
+          <Title>Electricity</Title>
+          <Abstract>Electricity</Abstract>
+
+          <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>onemapfid</ogc:PropertyName>
+				<ogc:Literal>-1</ogc:Literal>
+     		</ogc:PropertyIsEqualTo>
+   		  </ogc:Filter>
+
+          <PolygonSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+			<Fill>
+              <CssParameter name="fill">#E8AC41</CssParameter>
+			  <CssParameter name="fill-opacity">0.8</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#E8AC41</CssParameter>
+              <CssParameter name="stroke-width">1</CssParameter>
+              <CssParameter name="stroke-linejoin">bevel</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <VendorOption name="inclusion">legendOnly</VendorOption>
+      </FeatureTypeStyle>
+
+      <FeatureTypeStyle>
+        <!--FeatureTypeName>Feature</FeatureTypeName-->
+        <Rule>
+          <Name>Electricity (Metered)</Name>
+          <Title>Electricity (Metered)</Title>
+          <Abstract>Electricity (Metered)</Abstract>
+
+          <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>onemapfid</ogc:PropertyName>
+				<ogc:Literal>-1</ogc:Literal>
+     		</ogc:PropertyIsEqualTo>
+   		  </ogc:Filter>
+
+          <PolygonSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+			<Fill>
+              <CssParameter name="fill">#FFFD01</CssParameter>
+			  <CssParameter name="fill-opacity">0.8</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#FFFD01</CssParameter>
+              <CssParameter name="stroke-width">1</CssParameter>
+              <CssParameter name="stroke-linejoin">bevel</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <VendorOption name="inclusion">legendOnly</VendorOption>
+      </FeatureTypeStyle>
+
+     
+      <FeatureTypeStyle>
+        <!--FeatureTypeName>Feature</FeatureTypeName-->
+        <Rule>
+          <Name>Pie Chart</Name>
+          <Title></Title>
+          <Abstract>Pie Chart</Abstract>
+          <!--MaxScaleDenominator>300000</MaxScaleDenominator--> 
+             <ogc:Filter>
+			<ogc:PropertyIsGreaterThan>
+				<ogc:PropertyName>billing</ogc:PropertyName>
+				<ogc:Literal>0</ogc:Literal>
+     		</ogc:PropertyIsGreaterThan>
+   		  </ogc:Filter>
+          
+          <PointSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+                       
+            <Geometry>
+              <ogc:Function name="interiorPoint">
+                <ogc:PropertyName>the_geom</ogc:PropertyName>
+              </ogc:Function>
+            </Geometry>
+            
+            <Graphic>
+              <ExternalGraphic>
+                <OnlineResource 
+                xmlns:xlink="http://www.w3.org/1999/xlink" 
+				xlink:href="http://chart?cht=p3&amp;chd=t:${100*(refsrv/billing)},${100*(sewsrv/billing)},${100*(rtelvy/billing)},${100*(wtrsrv/billing)},${100*(wtrmtr/billing)},${100*(elcsrv/billing)},${100*(elcmtr/billing)},${100*(other/billing)}&amp;chco=BFDEA3,664C35,C52234,257BA0,73AAC2,E8AC41,FFFD01&amp;chdl=Refuse|Sewer|Rates|Water|Water(M)|Elec|Elec(M)&amp;chdls=0000ff,10&amp;chxt=x,y&amp;chs=200x150&amp;chf=bg,s,FFFFFF00"/>
+             	<Format>application/chart</Format>
+              </ExternalGraphic> 
+              <Size>
+                <ogc:Mul>
+              <ogc:Function name="geomLength">
+                <ogc:PropertyName>the_geom</ogc:PropertyName>
+              </ogc:Function>
+              <ogc:Literal>6800</ogc:Literal>
+            </ogc:Mul>
+              </Size>
+            </Graphic>
+            
+          </PointSymbolizer>
+        </Rule>
+        <VendorOption name="exclusion">mapOnly</VendorOption>
+       
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>
